@@ -1,0 +1,32 @@
+# Use the official Python image
+FROM python:3.13.1-bullseye
+
+# Set environment variables
+# PYTHONDONTWRITEBYTECODE is an environment variable in Python that prevents the interpreter 
+# from writing .pyc files (bytecode files) to disk. When set to a non-empty string, Python will not generate 
+# these files upon importing modules. This can be useful in environments where writing files is undesirable, such 
+# as in certain deployment scenarios or when working with read-only file systems.
+ENV PYTHONDONTWRITEBYTECODE=1
+
+# The PYTHONUNBUFFERED environment variable in Python controls the buffering behavior of standard 
+# output and standard error streams. When set to a non-empty string (e.g., "1" or "TRUE"), it forces these streams 
+# to be unbuffered. This means that output written to them is immediately flushed and appears directly, without waiting 
+# for a buffer to fill up.
+ENV PYTHONUNBUFFERED=1
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the application code
+COPY app.py .
+
+# Copy the dependencies file
+COPY requirements.txt .
+# Install dependencies
+RUN pip install -r requirements.txt
+
+# Expose the port
+EXPOSE 5000
+
+# Run the application
+CMD ["/usr/local/bin/python", "/app/app.py"]

@@ -1,0 +1,17 @@
+# NOTE:  The database container is not setup for persistent storage.  This is a simple demo application and the data will be
+# lost when the container is stopped.  In a production environment, you would want to use a volume to store the data on the host machine.
+
+# Use the official PostgreSQL image
+FROM postgres:latest
+
+# Set environment variables
+# This is a simple demo application, these should be stored in a more secure way in a production environment
+ENV POSTGRES_DB=postgres
+ENV POSTGRES_USER=cos_data_tech
+ENV POSTGRES_PASSWORD=cos_data_tech
+
+# Copy any custom SQL scripts to initialize the database (if needed)
+# COPY ./init.sql /docker-entrypoint-initdb.d/
+
+# Expose the default PostgreSQL port
+EXPOSE 5432

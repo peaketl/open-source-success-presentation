@@ -1,7 +1,7 @@
 services:
   app:
     build: .
-    container_name: cos-data-and-technology-preso-app
+    container_name: cos-data-and-technology-preso-ping-app
     volumes:
       - ./app:/app
     restart: unless-stopped

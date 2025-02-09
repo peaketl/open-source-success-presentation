@@ -180,3 +180,5 @@ publish/images
 
 /app
 /ping/app
+
+webapp/.venv
