@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 
-# Ensure logging folder exists for cron job, also used by app
+# Ensure logging folder exists
 mkdir -p /app/logs
 
-# Make sure cron log file exists
+# Make sure log file exists
 touch /app/logs/ping.log
 
 # Copy files to app directory (mounted in docker compose volume)
@@ -15,4 +15,5 @@ chmod -R 777 /app
 # Make script executable
 chmod +x /app/ping.sh
 
-bash /app/ping.sh
+# Run the script
+/app/ping.sh
