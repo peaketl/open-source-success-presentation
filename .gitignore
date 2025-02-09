@@ -177,3 +177,5 @@ peak-etl-read-only_id_ed25519
 .app
 .db
 publish/images
+
+/app

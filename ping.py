@@ -16,22 +16,19 @@ def ping_address(address):
             print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Ping to {address} failed.")
     except Exception as e:
         print(f"Error occurred while pinging {address}: {e}")
+        if "No such file or directory: 'ping'" in str(e):
+            print("Please make sure the 'ping' utility is installed on your system.")
 
 def main():
     parser = argparse.ArgumentParser(description="Continuous Ping Monitor")
+
     parser.add_argument("address", help="IP address or hostname to ping")
-    parser.add_argument("-i", "--interval", type=int, default=5, help="Ping interval in seconds (default: 5)")
 
     args = parser.parse_args()
 
-    print(f"Starting continuous ping to {args.address} every {args.interval} seconds...\nPress Ctrl+C to stop.\n")
+    print(f"Pinging {args.address}...")
 
-    try:
-        while True:
-            ping_address(args.address)
-            time.sleep(args.interval)
-    except KeyboardInterrupt:
-        print("\nPing monitoring stopped by user.")
+    ping_address(args.address)
 
 if __name__ == "__main__":
     main()

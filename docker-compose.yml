@@ -1,0 +1,7 @@
+services:
+  app:
+    build: .
+    container_name: cos-data-and-technology-preso-app
+    volumes:
+      - ./app:/app
+    restart: unless-stopped
