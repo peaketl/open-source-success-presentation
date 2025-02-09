@@ -182,3 +182,5 @@ publish/images
 /ping/app
 
 webapp/.venv
+
+~$presentation.pptx
