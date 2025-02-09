@@ -179,3 +179,4 @@ peak-etl-read-only_id_ed25519
 publish/images
 
 /app
+/ping/app
