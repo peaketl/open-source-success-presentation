@@ -1,15 +1,18 @@
 import os
 from flask import Flask, request, jsonify, render_template_string
 import psycopg
+from dotenv import load_dotenv
 
 app = Flask(__name__)
+
+load_dotenv()
 
 # Database connection parameters
 # This is a simple example, in production you should use environment variables
 db_params = {
-    "dbname": "postgres",
-    "user": "cos_data_tech",
-    "password": "cos_data_tech",
+    "dbname": os.getenv("POSTGRES_DB", 'cos_data_tech'),
+    "user": os.getenv("POSTGRES_USER"),
+    "password": os.getenv("POSTGRES_PASSWORD"),
     "host": os.getenv("POSTGRES_SERVER", '127.0.0.1'),
     "port": 5432
 }

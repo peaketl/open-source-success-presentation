@@ -1,3 +1,5 @@
+# Sets up the database to run directly using docker run
+
 # NOTE:  The database container is not setup for persistent storage.  This is a simple demo application and the data will be
 # lost when the container is stopped.  In a production environment, you would want to use a volume to store the data on the host machine.
 

@@ -1,0 +1,19 @@
+FROM python:3.13.1-bullseye
+
+WORKDIR /usr/src/app
+
+# Copy the custom script
+COPY app.py .
+
+COPY ./docker/entrypoint.sh .
+# Ensure the script is executable
+RUN chmod +x ./entrypoint.sh
+
+# Copy the requirements file
+COPY requirements.txt .
+
+# Install the Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Run entry point script
+ENTRYPOINT [ "./entrypoint.sh" ]
