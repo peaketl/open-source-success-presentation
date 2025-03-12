@@ -1,7 +1,7 @@
 #!/bin/bash
 
 REMOTE_APP_DIR="~/apps/cos-data-and-technology-preso/webapp"
-SCP_TARGET=jason@5.tcp.ngrok.io
+SCP_TARGET=jason@cos-data-and-technology-03-19-2025-google-vm.peaketl.com
 SCP_PORT=24151
 
 # if there is no .env file, check the parent folder
