@@ -185,4 +185,4 @@ webapp/.venv
 
 ~$presentation.pptx
 
-./webapp/publish/images
+webapp/publish/images
