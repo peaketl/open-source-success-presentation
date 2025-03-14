@@ -20,5 +20,7 @@ services:
     container_name: cos-data-and-technology-preso-webapp-db
     env_file:
       - .env
+    volumes:
+      - ./.db/data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
