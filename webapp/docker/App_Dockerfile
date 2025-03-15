@@ -1,4 +1,9 @@
-FROM python:3.13.1-bullseye
+# This was the image I usually start with then I get it working with the slim image
+#FROM python:3.13.1-bullseye
+FROM python:3.13.2-slim-bullseye
+
+# Install postresql client, need this since we are using the slim Docker image (i.e. not pre-installed)
+RUN apt-get update && apt-get install -y postgresql-client
 
 WORKDIR /usr/src/app
 
