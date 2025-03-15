@@ -26,7 +26,7 @@ echo "Using .env file: $ENV_FILE"
 
 # Send the tar files to the remote server using scp
 echo "Sending files to $SCP_TARGET:$SCP_PORT"
-scp -P $SCP_PORT $ENV_FILE ./publish/images/*.tar ./publish/App_Dockerfile ./publish/DB_Dockerfile ./publish/docker-compose.yml $SCP_TARGET:$REMOTE_APP_DIR
+scp -P $SCP_PORT $ENV_FILE ./publish/images/*.tar ./publish/App_Dockerfile ./publish/DB_Dockerfile ./publish/docker-compose.yml ./publish/clear-docker.sh $SCP_TARGET:$REMOTE_APP_DIR
 
 # Login to the remote server to load the images
 # For some reason new version of docker save with dashes in the name even
@@ -61,6 +61,8 @@ docker-compose -f $REMOTE_APP_DIR/docker-compose.yml up --force-recreate -d
 echo "Cleaning up"
 rm $REMOTE_APP_DIR/cos_data_and_technology_preso_webapp_app.tar
 rm $REMOTE_APP_DIR/cos_data_and_technology_preso_webapp_db.tar
+echo "Make clear-docker.sh executable"
+chmod +x $REMOTE_APP_DIR/clear-docker.sh
 EOF
 
 echo "Done @ $(date)"
