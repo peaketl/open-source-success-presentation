@@ -1,4 +1,4 @@
-# Use the official Python image from the Docker Hub
+# Use a small base image
 FROM alpine:latest
 
 # Set the working directory in the container
