@@ -4,7 +4,8 @@
 # lost when the container is stopped.  In a production environment, you would want to use a volume to store the data on the host machine.
 
 # Use the official PostgreSQL image
-FROM postgres:latest
+# FROM postgres:latest
+FROM postgres:17.4-alpine3.21
 
 # Set environment variables
 # This is a simple demo application, these should be stored in a more secure way in a production environment
