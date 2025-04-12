@@ -1,4 +1,4 @@
-# PING - COS Data and Technology Presentation - March 19, 2025
+# PING - Open Source Success Presentation
 
 ## Overview
 
@@ -26,8 +26,8 @@ Ensure you have the following installed:
 **Clone the Repository**:
 
 ```bash
-git clone https://github.com/peaketl/cos-data-and-technology-03-19-2025.git
-cd cos-data-and-technology-03-19-2025
+git clone https://github.com/peaketl/open-source-success-presentation.git
+cd open-source-success-presentation
 ```
 
 **Grant `EXECUTE` permissions to the scripts**
@@ -83,5 +83,5 @@ docker-compose up --build
 
 ## Acknowledgments
 
-Thanks to all participants of the COS Data and Technology User Group.
+Thanks to all the contributors and participants
 
