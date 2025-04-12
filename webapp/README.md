@@ -1,4 +1,4 @@
-# WebApp - COS Data and Technology Presentation - March 19, 2025
+# WebApp - Open Source Success Presentation
 
 ## Overview
 
@@ -24,8 +24,8 @@ Ensure you have the following installed:
 **Clone the Repository**:
 
 ```bash
-git clone https://github.com/peaketl/cos-data-and-technology-03-19-2025.git
-cd cos-data-and-technology-03-19-2025/webapp
+git clone https://github.com/peaketl/open-source-success-presentation.git
+cd open-source-success-presentation/webapp
 ```
 
 **Grant `EXECUTE` permissions to the scripts**:
@@ -79,4 +79,4 @@ docker-compose up --build
   2. **Submit Data**: Enter a name in the form and submit it. The data will be stored in the PostgreSQL database and displayed on the page.
   
 ## Acknowledgments
-Thanks to all participants of the COS Data and Technology User Group.
+Thanks to all the contributors and participants.
