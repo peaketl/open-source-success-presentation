@@ -1,6 +1,6 @@
-# COS Data and Technology Presentation - March 19, 2025
+# Open Source Success Presentation
 
-Welcome to the repository for the COS Data and Technology Presentation delivered on March 19, 2025. This repository contains two distinct demos showcasing practical applications of containerization and data management.
+Welcome to the repository for the COS Data and Technology Presentation delivered on March 19, 2025. This repository contains two distinct demos showcasing practical containerization and data management applications.
 
 ## Project Structure
 
@@ -19,8 +19,8 @@ Ensure you have the following installed:
 ### Cloning the Repository
 
 ```bash
-git clone https://github.com/peaketl/cos-data-and-technology-03-19-2025.git
-cd cos-data-and-technology-03-19-2025
+git clone https://github.com/peaketl/open-source-success-presentation.git
+cd open-source-success-presentation
 ```
 
 ## Running the Demos
@@ -55,5 +55,5 @@ Access the application at [http://localhost:5000](http://localhost:5000). Use th
 
 ## Acknowledgments
 
-Thanks to all contributors and participants of the COS Data and Technology User Group.
+Thanks to all the contributors and participants.
 
