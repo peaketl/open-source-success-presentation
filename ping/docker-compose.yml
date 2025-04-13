@@ -1,7 +1,7 @@
 services:
   app:
     build: .
-    container_name: cos-data-and-technology-preso-ping-app
+    container_name: open-source-success-presentation-app
     volumes:
       - ./app:/app
     restart: unless-stopped

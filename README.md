@@ -1,6 +1,6 @@
 # Open Source Success Presentation
 
-Welcome to the repository for the COS Data and Technology Presentation delivered on March 19, 2025. This repository contains two distinct demos showcasing practical containerization and data management applications.
+Welcome to the repository for the "Open Source Success" Presentation. This repository contains two distinct demos showcasing practical containerization and data management applications.
 
 ## Project Structure
 
