@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    container_name: open-source-success-gpu-app
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    volumes:
+      - ./app:/app
+    restart: unless-stopped

@@ -186,3 +186,6 @@ webapp/.venv
 ~$presentation.pptx
 
 webapp/publish/images
+
+gpu/app
+ping/app
