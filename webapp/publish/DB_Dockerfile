@@ -1,1 +1,1 @@
-FROM cos_data_and_technology_preso_webapp_db:latest
+FROM open_source_success_presentation_webapp_db:latest

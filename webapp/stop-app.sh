@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Stop the application container
-docker rm $(docker stop $(docker ps -a -q --filter ancestor=cos-data-and-technology-preso-webapp-app))
+docker rm $(docker stop $(docker ps -a -q --filter ancestor=open-source-success-presentation-webapp-app))

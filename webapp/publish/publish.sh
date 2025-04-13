@@ -1,8 +1,8 @@
 #!/bin/bash
 
-REMOTE_APP_DIR="~/apps/cos-data-and-technology-preso/webapp"
-SCP_TARGET=jason@cos-data-and-technology-03-19-2025-google-vm.peaketl.com
-SCP_PORT=24151
+REMOTE_APP_DIR="~/apps/open-source-success-presentation/webapp"
+SCP_TARGET=jason@3.tcp.ngrok.io
+SCP_PORT=26049
 
 # if there is no .env file, check the parent folder
 if [ ! -f "./publish/.env" ]; then
@@ -45,22 +45,22 @@ echo "Stopping any running containers"
 docker-compose -f $REMOTE_APP_DIR/docker-compose.yml down
 echo "Removing any existing images"
 docker rmi webapp_web --force
-docker rmi cos_data_and_technology_preso_webapp_app --force
-docker rmi cos-data-and-technology-preso-webapp-app --force
+docker rmi open_source_success_presentation_webapp_app --force
+docker rmi open-source-success-presentation-webapp-app --force
 docker rmi webapp_db --force
-docker rmi cos_data_and_technology_preso_webapp_db --force
-docker rmi cos-data-and-technology-preso-webapp-db --force
+docker rmi open_source_success_presentation_webapp_db --force
+docker rmi open-source-success-presentation-webapp-db --force
 echo "Loading latest images"
-docker load -i $REMOTE_APP_DIR/cos_data_and_technology_preso_webapp_app.tar
-docker load -i $REMOTE_APP_DIR/cos_data_and_technology_preso_webapp_db.tar
+docker load -i $REMOTE_APP_DIR/open_source_success_presentation_webapp_app.tar
+docker load -i $REMOTE_APP_DIR/open_source_success_presentation_webapp_db.tar
 echo "Build containers"
-docker build -f $REMOTE_APP_DIR/App_Dockerfile --no-cache -t cos-data-and-technology-preso-webapp-app .
-docker build -f $REMOTE_APP_DIR/DB_Dockerfile --no-cache -t cos-data-and-technology-preso-webapp-db .
+docker build -f $REMOTE_APP_DIR/App_Dockerfile --no-cache -t open-source-success-presentation-webapp-app .
+docker build -f $REMOTE_APP_DIR/DB_Dockerfile --no-cache -t open-source-success-presentation-webapp-db .
 echo "Starting the containers"
 docker-compose -f $REMOTE_APP_DIR/docker-compose.yml up --force-recreate -d
 echo "Cleaning up"
-rm $REMOTE_APP_DIR/cos_data_and_technology_preso_webapp_app.tar
-rm $REMOTE_APP_DIR/cos_data_and_technology_preso_webapp_db.tar
+rm $REMOTE_APP_DIR/open_source_success_presentation_webapp_app.tar
+rm $REMOTE_APP_DIR/open_source_success_presentation_webapp_db.tar
 echo "Make clear-docker.sh executable"
 chmod +x $REMOTE_APP_DIR/clear-docker.sh
 EOF

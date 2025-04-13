@@ -3,7 +3,7 @@ services:
     build:
       context: ./
       dockerfile: ./App_Dockerfile
-    container_name: cos-data-and-technology-preso-webapp-app
+    container_name: open-source-success-presentation-webapp-app
     ports:
       - "5000:5000"
     env_file:
@@ -17,7 +17,7 @@ services:
     build:
       context: ./
       dockerfile: ./DB_Dockerfile
-    container_name: cos-data-and-technology-preso-webapp-db
+    container_name: open-source-success-presentation-webapp-db
     env_file:
       - .env
     volumes:

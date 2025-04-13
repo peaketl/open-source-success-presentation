@@ -10,7 +10,7 @@ load_dotenv()
 # Database connection parameters
 # This is a simple example, in production you should use environment variables
 db_params = {
-    "dbname": os.getenv("POSTGRES_DB", 'cos_data_tech'),
+    "dbname": os.getenv("POSTGRES_DB", 'open_source_success'),
     "user": os.getenv("POSTGRES_USER"),
     "password": os.getenv("POSTGRES_PASSWORD"),
     "host": os.getenv("POSTGRES_SERVER", '127.0.0.1'),
