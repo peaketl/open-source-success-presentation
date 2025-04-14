@@ -28,6 +28,10 @@ docker rmi -f $(docker images -q)
 echo "Removing all Docker volumes..."
 docker volume rm $(docker volume ls -q)
 
+# Remove all Docker builder caches
+echo "Removing all Docker builder caches..."
+docker builder prune -f
+
 # Remove unused networks
 echo "Removing unused networks..."
 docker network prune -f
