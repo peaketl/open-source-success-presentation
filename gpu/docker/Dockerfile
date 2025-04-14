@@ -15,7 +15,7 @@ RUN python3 -m venv /usr/src/app/.venv
 COPY app.py .
 COPY app.sh .
 COPY loop.sh .
-COPY ./entrypoint.sh .
+COPY ./docker/entrypoint.sh .
 # Ensure the scripts is executable
 RUN chmod +x ./app.sh
 RUN chmod +x ./loop.sh

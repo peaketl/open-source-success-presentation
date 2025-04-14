@@ -1,0 +1,1 @@
+FROM open_source_success_gpu_app:latest
