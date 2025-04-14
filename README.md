@@ -53,6 +53,17 @@ cd webapp
 
 Access the application at [http://localhost:5000](http://localhost:5000). Use the interactive form to submit data and view stored entries.
 
+### 3. GPU Demo
+
+Navigate to the `gpu` directory to run the demo:
+
+```bash
+cd gpu
+./start.sh
+```
+This will log some basic GPU information and exercise the GPU's
+
+
 ## Acknowledgments
 
 Thanks to all the contributors and participants.
