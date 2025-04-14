@@ -6,6 +6,7 @@ Welcome to the repository for the "Open Source Success" Presentation. This repos
 
 - **/ping**: Demonstrates how to execute a simple bash script within a Docker container. The script performs a `ping` command to a specified destination and logs the results to a file. [Learn more](./ping/README.md).
 - **/webapp**: A Flask-based web application that interacts with a PostgreSQL database. Users can submit data through an interactive form, and the application displays all stored data. [Learn more](./webapp/README.md).
+- **/gpu**: A Python script that demostrates GPU usage. [Learn more](./gpu/README.md).
 
 ## Getting Started
 
